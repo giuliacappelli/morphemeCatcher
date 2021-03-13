@@ -2,26 +2,32 @@
 Quick-and-dirty script to find the base word for any word with derivational suffixes. Extremely noisy, handle with care.
 
 ## Input files
-The script requires a comma-separated file with the lemmas in your corpus and their absolute frequency, named `input.txt`.
+The script requires three input files. First, a space-separated file with the lemmas in your corpus and their absolute frequency, named `input.txt`. Unfortunately, the file I used to compute my output is too large to be uploaded here.
 
-    volta,1260829
-    modo,1209297
-    fine,1190979
-    punto,1160029
-    italia,1150307
-    vita,1139233
-    persona,1139018
-    diritto,1117652
+    volta 1260829
+    modo 1209297
+    fine 1190979
+    punto 1160029
+    italia 1150307
+    vita 1139233
+    persona 1139018
+    diritto 1117652
     ...
 
-The only other file required is a list of derivational suffixes, one per line, named `morphemes.txt`.
+The second file required is a list of derivational suffixes, one per line, named `morphemes.txt`.
 
     ata
     one
     uccio
 
+The last file is a clean list of nouns, named `input_cleaner.txt`, in case your `input.txt` is too noisy.
+
+    casa
+    italia
+    pizza
+
 ## The output
-The script does its thing and prints out the results into `output.txt`.
+The script does its thing and prints out the results into `output.txt`. A filter in the script ensures that only nouns with a corpus frequency >10 are included in the output.
 
     mario 112255 mare 251022 -io
     collegio 107802 collega 153361 -io
