@@ -27,13 +27,12 @@ The last file is a clean list of nouns, named `input_cleaner.txt`, in case your 
     pizza
 
 ## The output
-The script does its thing and prints out the results into `output.txt`. A filter in the script ensures that only nouns with a corpus frequency >10 are included in the output.
+The script does its thing and prints out the results into `output.txt`. Two filters in the script ensure that the output only includes nouns with a corpus frequency >10 whose base-noun has a corpus frequency >200.
 
     mario 112255 mare 251022 -io
     collegio 107802 collega 153361 -io
     serata 107319 sera 241663 -ata
     solito 102505 sole 257950 -ito
-    terrorismo 102395 terrore  0 -ismo
     regionale 101876 regione 855258 -ale
     trattato 101212 tratto 123608 -ato
     consigliere 97162 consiglio 957543 -ere
