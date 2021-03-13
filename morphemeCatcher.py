@@ -30,6 +30,6 @@ with open("output.txt", "w") as outfile:
 					for el in basemorf:
 						maybe = base+el
 						# print(maybe)
-						if maybe in dictnouns:
+						if (maybe in dictnouns) and (int(dictnouns[maybe]) > 200):
 							print(noun, dictnouns[noun], maybe, dictnouns[maybe], "-"+morf)
 							outfile.write(noun+" "+dictnouns[noun]+" "+maybe+" "+dictnouns[maybe]+" "+"-"+morf+"\r\n")
